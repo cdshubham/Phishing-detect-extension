@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "Phishing Detective",
+  "version": "0.1",
+  "icons": {
+    "16": "lock.png",
+    "48": "lock.png",
+    "128": "lock.png"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["jquery-3.1.1.min.js", "content.js"]
+    }
+  ]
+}
